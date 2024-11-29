@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <link rel = "icon" href="/static/Asset/Logo_Head.png">
+        <title > Ricetta</title>
+        <link rel="stylesheet" href="/static/style.css">
+        <!-- feather icon -->
+        <script src="https://unpkg.com/feather-icons"></script> 
+        
+    </head>
+
+    <body> 
+        <!-- Navbar -->
+
+        <header>
+            <!-- logo -->
+            <div class="navbar" id="navbar">
+                <div class="logo">
+                  <img src="/static/Asset/Logo_Home.png" > 
+                    <!-- menu -->
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">Home</a> </li>
+                        <li><a href="#About">About Us</a> </li>
+                        <li><a href="#Recipe">Recipes</a> </li>
+                    </ul>
+                </div>
+                <div class="nav-button">
+                    <div class="navbar-extra">
+                        <a href="# " id="search"><i data-feather="search"></i></a>
+                        <input type="text" id="search-input" class="search-input" placeholder="Type to search..." />
+                        <a href="# " id="hamburger-menu"><i data-feather="menu"></i></a>
+                    </div>
+                </div>
+                
+              </div>
+        </header>
+        <!-- Navbar Done -->
+
+        <!-- Home section start -->
+         <main>
+            <section id ="Home" >
+                <div class="descHome">
+                    <h1 > Not Sure What to Cook? Find Your Perfect Recipe <span class="Here">Here!</span></h1>
+                    <p> Explore recipes for every craving, from classic comfort foods to exciting new flavors.</p>
+                    <a href="#Recipe" class="tbnhijau">Get Your Recipes Now!</a>
+                </div>
+                <div class="home-img"> 
+                    <img src="/static/Asset/Gambarhome.png" alt="Gambarhome" width="520px" height="480px" >
+                 </div>
+               
+            </section>
+               <!-- Home section end -->
+                
+               <!-- About us start -->
+                <section id = "About">
+
+                        <div class="img-about">
+                            <img src="/static/Asset/GambarRecipe.png" alt="Recipe">
+                        </div>
+                        <div class="wrapper-about">
+                          <div class="about-desc">
+                            <h1> About <span class="Here">Us</span></h1>
+                            <p class="desc">
+                               Welcome to Ricetta, your go-to place for easy and delicious recipes! 
+                               Here, we bring together a variety of dishes from simple, 
+                               everyday meals to impressive favorites for special occasions. 
+                               Our recipes are crafted to suit all skill levels, 
+                               with clear steps and tips to make cooking stress-free and enjoyable.
+                            </p>
+                            <a href="#Recipe" class="tbnhijau">Learn More</a>
+                          </div>
+                        </div>
+                    
+                  
+                    <!-- dekorasi -->
+                    <img src="/static/Asset/sop.png" height="144px" width="128px" class="decor tomato top-right">
+                    <img src="/static/Asset/tomat.png" height="100px" width="150px" class="decor tomato bottom-right">
+                </section>
+                <!-- About section end -->
+
+             <!-- recipe section start-->
+                <section id="Recipe">
+                     <div class="recipe"> 
+                        <h1> Popular <span class="Here"> Recipe</span></h1> 
+                        <div class="Search-recipe">
+                            <h2> Explore Your Recipe</h2>
+                            <div class="search-bar"> 
+                                <input type="text" placeholder="Search...">
+                            </div>
+                        </div>
+                        
+                            <div class="recipe-grid">
+                                {{ range .reseps}}
+                                <div class="wrapper-grid">
+                                <div class="recipe-card"> 
+                                    <img src="/static/Asset/{{ .Img_url}}" alt="{{ .Nama }}">
+                                    <h3>{{ .Nama }}</h3>
+                                    <p>{{ .Details }}</p>
+                                    <div class="card-footer">
+                                    <a href="/static/detail-recipe.html" class="tbnhijau">Read More</a>
+                                    </div>
+                                </div>
+                                </div>
+                                {{ end }}
+                            </div>
+                        
+                        
+ 
+                        <div class="load"> 
+                            <a href="#" class="btnmerah">Load More</a>
+                        </div>
+                    </div>
+                </section>
+                 <!-- recipe section end-->     
+         </main>
+       
+             <!-- footer start -->
+             
+        <footer class="footer">
+            <div class="footer-container">
+                <!-- Logo dan nama -->
+                <div class="footer-logo">
+                    <img src="/static/Asset/Logo_Home.png" alt="Ricetta Logo">
+                </div>
+
+                <!-- Navigation -->
+                <div class="footer-nav">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#About">About Us</a></li>
+                        <li><a href="#Recipe">Recipes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Copyright -->
+                <div class="footer-copy">
+                    <p>&copy;Ricetta</p>
+                </div>
+            </div>
+        </footer>
+    <!-- feather icon -->
+    <script>
+        feather.replace();
+      </script>
+    <script src="/static/script.js"></script>    
+    </body>
+</html>
