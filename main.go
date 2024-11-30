@@ -4,6 +4,7 @@ import (
 	"log"
 	"net/http"
 	"ricetta/config"
+	"ricetta/controllers/detailcontroller"
 	"ricetta/controllers/homecontroller"
 )
 
@@ -13,6 +14,7 @@ func main() {
 	//Homepage
 	// http.HandleFunc("/", homecontroller.Welcome)
 	http.HandleFunc("/", homecontroller.Index)
+	http.HandleFunc("/detail-recipe", detailcontroller.DetailRecipe)
 
 	//detail recipe
 

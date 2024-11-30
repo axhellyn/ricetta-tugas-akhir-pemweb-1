@@ -8,4 +8,6 @@ type Resep struct {
 	Img_url    string
 	Details    string
 	Created_at time.Time
+	Cara string
+	Porsi int
 }

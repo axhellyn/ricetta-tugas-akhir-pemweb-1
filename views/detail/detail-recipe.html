@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel = "icon" href="/static/Asset/Logo_Head.png">
+    <title > Ricetta</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- feather icon -->
+    <script src="https://unpkg.com/feather-icons"></script> 
+</head>
+<body>
+    
+  <header>
+    <!-- logo -->
+    <div class="navbar" id="navbar">
+        <div class="logo">
+          <a href="Index.html"><img src="/static/Asset/Logo_Home.png" > </a>      
+            <!-- menu -->
+        </div>
+        <div class="nav-button">
+            <div class="navbar-extra">
+                <a href="# " id="search"><i data-feather="search"></i></a>
+                <input type="text" id="search-input" class="search-input" placeholder="Type to search..." />
+                <a href="# " id="hamburger-menu"><i data-feather="menu"></i></a>
+            </div>
+        </div>
+        
+      </div>
+  </header>
+<!-- navbar done -->
+
+
+     <main>
+        <section id="Salad-recipe">
+            <div class="container">
+                <!-- Gambar Salad -->
+                <div class="image-container">
+                  <img src="/static/Asset/{{ .Resep.Img_url }}" alt="{{ .Resep.Nama }}" width="500px">
+                </div>
+        
+                <div class="text-container">
+                  <h1>{{ .Resep.Nama }}</h1>
+                  <h4>{{ .Resep.Porsi }} Porsi</h4>
+                </div>
+        
+                <!-- Ingredients Section -->
+                <div class="ingredients">
+                  <h2 class="title-ingredients">Ingredients</h2>
+                  <div class="ingredient-list">
+                    <ul>
+                      {{ range .Bahans }}
+                      <li>{{ .Name }}</li>
+                      {{ end }}
+                    </ul>
+                    <ul>
+                      <!-- <li>250 gr Mayonnaise</li>
+                      <li>1 Bottle Yogurt</li>
+                      <li>250 ml Sweetened Condensed Milk </li>
+                      <li>200 ml Full Cream Milk</li>
+                      <li>200 ml Water</li>
+                      <li>3 tbsp Wheat Flour</li>
+                      <li>A Pinch od Salt</li>
+                      <li>1/2 Block of Grated Cheese</li> -->
+                    </ul>
+                  </div>
+                </div>
+        
+                <!-- To-Do Section -->
+                <div class="to-do">
+                  <h2 class="Todo">To do</h2>
+                  <ol>
+                    <!-- <li>Wash and peel the fruit. After that, cut the fruit according to taste. </li>
+                    <li> Next, we will make a sauce for the salad, by mixing water, 
+                        milk, flour, and a pinch of salt. Then, cook over medium heat. 
+                        Stir continuously until the mixture thickens and set aside. </li>
+                    <li>Then mix the cooked mixture with yogurt, condensed milk, and mayonnaise.
+                         Stir until evenly mixed. </li>
+                    <li>Next, arrange the fruit in a container then pour the sauce and add cheese
+                         topping and the fruit salad is ready to be served.</li> -->
+                        {{ .Resep.Cara }}
+                  </ol>
+                </div>
+              </div>
+        </section>
+     </main>
+
+       <!-- feather icon -->
+    <script>
+      feather.replace();
+    </script>
+     <script src="/static/script.js"></script>    
+</body>
+</html>
