@@ -41,12 +41,12 @@
         <!-- Home section start -->
          <main>
             <section id ="Home" >
-                <div class="descHome">
+                <div class="descHome" data-aos="fade-right" data-aos-duration="1000" ata-aos-easing="ease-in-out">
                     <h1 > Not Sure What to Cook? Find Your Perfect Recipe <span class="Here">Here!</span></h1>
                     <p> Explore recipes for every craving, from classic comfort foods to exciting new flavors.</p>
                     <a href="#Recipe" class="tbnhijau">Get Your Recipes Now!</a>
                 </div>
-                <div class="home-img"> 
+                <div class="home-img" data-aos="fade-left" data-aos-duration="1000" ata-aos-easing="ease-in-out"> 
                     <img src="/static/Asset/Gambarhome.png" alt="Gambarhome" width="520px" height="480px" >
                  </div>
                
@@ -55,10 +55,10 @@
                 
                <!-- About us start -->
                 <section id = "About">
-                        <div class="img-about">
+                        <div class="img-about" data-aos="fade-right" data-aos-duration="1000" ata-aos-easing="ease-in-out">
                             <img src="/static/Asset/GambarRecipe.png" alt="Recipe">
                         </div>
-                        <div class="wrapper-about">
+                        <div class="wrapper-about" data-aos="fade-left" data-aos-duration="1000" ata-aos-easing="ease-in-out">
                           <div class="about-desc">
                             <h1> About <span class="Here">Us</span></h1>
                             <p class="desc">
@@ -81,7 +81,7 @@
 
              <!-- recipe section start-->
                 <section id="Recipe">
-                     <div class="recipe"> 
+                     <div class="recipe" data-aos="fade-up" data-aos-duration="1000" ata-aos-easing="ease-in-out"> 
                         <h1> Popular <span class="Here"> Recipe</span></h1> 
                         <div class="Search-recipe">
                             <h2> Explore Your Recipe</h2>
@@ -147,7 +147,7 @@
     <script src="/static/script.js"></script>    
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init();
+      AOS.init( {once: true} );
     </script>
     </body>
 </html>
